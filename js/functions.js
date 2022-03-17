@@ -265,13 +265,15 @@ var SEMICOLON = SEMICOLON || {};
 
 		goToTopScroll: function(){
 			if( $body.hasClass('device-lg') || $body.hasClass('device-md') || $body.hasClass('device-sm') ) {
-				if($window.scrollTop() > 450) {
+				if($window.scrollTop() > 0) {
 					$goToTopEl.fadeIn();
 				} else {
 					$goToTopEl.fadeOut();
 				}
 			}
 		},
+
+
 
 		fullScreen: function(){
 			if( $fullScreenEl.length > 0 ) {

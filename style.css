@@ -20,10 +20,12 @@
 
 @media (min-width: 576px) {
 	.container { max-width: 540px; }
+
 }
 
 @media (min-width: 768px) {
 	.container { max-width: 750px; }
+
 }
 
 @media (min-width: 992px) {
@@ -33,7 +35,22 @@
 @media (min-width: 1200px) {
 	.container { max-width: 1170px; }
 }
+@media  (max-width:768px) {
+	.mobile-site {
+		display: none;
 
+	}
+}
+@media  (min-width:768px) {
+	.dekstop-site {
+		display: none;
+	}
+
+	.mobile-site-padding{
+		padding-top: 30px;
+	}
+
+}
 
 body,
 .dropdown-menu { font-size: 0.875rem; }
@@ -87,12 +104,13 @@ html{
 
 }
 
+
+
 body {
 	line-height: 1.5;
 	color: #555;
 	font-family:'Proxima Nova Regular';
 	background: url(images/top_bck.png) no-repeat top center ;
-
 
 }
 
@@ -105,7 +123,9 @@ a:hover { color: #222; }
 
 a img { border: none; }
 
-img { max-width: 100%; }
+img { max-width: 100%;
+
+}
 
 iframe { border: 10px #fff solid;
 	border-radius: 5px;
@@ -178,12 +198,12 @@ small { font-family:'Proxima Nova Regular'; }
 	max-width: 800px;
 	margin: 1.75rem auto;
 	max-height: calc(100vh - 210px);
-	overflow-y: auto;
+	overflow:auto !important;
 }
 
 
 .modal-dialog ul, .blankd ul {
-margin-left:25px
+	margin-left:25px
 }
 
 .modal-dialog h3, .blankd h3 {
@@ -222,7 +242,7 @@ margin-left:25px
 
 .ohidden {
 	position: relative;
-	overflow: hidden !important;
+	overflow: auto !important;
 }
 
 #wrapper {
@@ -2816,6 +2836,9 @@ body.side-panel-open .body-overlay {
 	z-index: 298;
 	pointer-events: auto;
 }
+#myProgram {
+	overflow-y:auto;
+}
 
 body.side-panel-open:not(.device-xs):not(.device-sm):not(.device-md) .body-overlay:hover { cursor: url('images/icons/close.png') 15 15, default; }
 
@@ -3520,7 +3543,7 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 #content {
 	position: relative;
-	overflow: hidden;
+
 	/*! background-color: #FFF; */
 }
 
@@ -7786,6 +7809,8 @@ body:not(.device-touch) .button.button-full strong {
 /* Feature Box - Right
 -----------------------------------------------------------------*/
 
+
+
 .feature-box.fbox-right {
 	padding: 0 80px 0 0;
 	text-align: right;
@@ -8900,7 +8925,7 @@ body:not(.device-touch) .social-icon i {
 	display: block;
 	position: relative;
 	line-height: 21px;
-	padding: 0 30px 0 24px;
+	padding: 0 30px 0 25px;
 	margin: 0;
 	font-size: 21px;
 	font-weight: 300;
@@ -8911,10 +8936,10 @@ body:not(.device-touch) .social-icon i {
 .toggle .togglet i {
 	position: absolute;
 	top: 0;
-	right: 10px;
-	width: 24px;
+	right: 1px;
+	width: 30px;
 	text-align: center;
-	font-size: 40px;
+	font-size: 39px;
 	line-height: 24px;
 	color: #00a4e4;
 }
@@ -8935,7 +8960,7 @@ body:not(.device-touch) .social-icon i {
 .toggle .togglec {
 	display: block;
 	position: relative;
-	padding: 10px 0 0 24px;
+	padding: 15px 0 0 30px;
 	font-size:18px;
 	color: #5e6770;
 }
@@ -11696,7 +11721,7 @@ input[type=checkbox]:not(:checked) + label.error { display: block !important; }
 
 
 #gotoTop {
-	display: none;
+	display: block !important;
 	z-index: 299;
 	position: fixed;
 	width: 40px;
@@ -12030,7 +12055,7 @@ button.toast-close-button {
 
 
 /* ----------------------------------------------------------------
-	Footer
+
 -----------------------------------------------------------------*/
 
 
